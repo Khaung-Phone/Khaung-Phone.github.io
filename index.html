@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ye Khaung Phone — Junior Software Engineer portfolio">
+  <title>Ye Khaung Phone | Junior Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">YK<span>P.</span></a>
+    <button class="menu" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">JUNIOR SOFTWARE ENGINEER</p>
+        <h1>Ye Khaung<br><span>Phone.</span></h1>
+        <p class="lead">Fresh graduate in Information Science with a passion for software development, web applications, and deep-learning projects.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View Projects <span>↗</span></a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="profile-card reveal">
+        <div class="profile-frame">
+          <img src="assets/profile.jpg" alt="Ye Khaung Phone profile photo">
+        </div>
+        <div class="profile-caption">
+          <span>AVAILABLE FOR OPPORTUNITIES</span>
+          <strong>Junior Software Engineer</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="two-col">
+        <h2>Ready to turn<br><span>ideas into software.</span></h2>
+        <div>
+          <p class="large">I am a fresh graduate who values responsibility and orderliness. I am eager to begin my professional journey and look forward to gaining my first work experience.</p>
+          <p>I enjoy building practical projects and exploring how programming can solve real-world problems. My project experience includes deep-learning audio separation, recommendation systems, and web applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section muted">
+      <div class="section-label">02 / SKILLS</div>
+      <h2>Technical <span>toolkit.</span></h2>
+      <div class="skills-grid">
+        <article><small>01</small><h3>Python</h3><p>Primary programming language for software and deep-learning projects.</p></article>
+        <article><small>02</small><h3>C++</h3><p>Programming fundamentals and application development.</p></article>
+        <article><small>03</small><h3>Java</h3><p>Object-oriented programming and application development.</p></article>
+        <article><small>04</small><h3>HTML / CSS</h3><p>Building clean and responsive web interfaces.</p></article>
+        <article><small>05</small><h3>Deep Learning</h3><p>Experience with a multi-instrument and vocal separation system.</p></article>
+        <article><small>06</small><h3>Prolog</h3><p>Used for a game recommendation system.</p></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-label">03 / PROJECT EXPERIENCE</div>
+      <h2>Things I've <span>built.</span></h2>
+      <div class="projects">
+        <article class="project featured">
+          <div class="project-number">01</div>
+          <div><div class="tag">DEEP LEARNING</div><h3>Multi-Instrument & Vocal Separation</h3><p>A deep-learning system designed to separate vocals and multiple musical instruments from mixed audio.</p><div class="stack"><span>Python</span><span>Deep Learning</span><span>Audio</span></div></div>
+        </article>
+        <article class="project">
+          <div class="project-number">02</div>
+          <div><div class="tag">AI / LOGIC PROGRAMMING</div><h3>Game Recommendation System</h3><p>A game recommendation project developed using Prolog.</p><div class="stack"><span>Prolog</span><span>Recommendation</span></div></div>
+        </article>
+        <article class="project">
+          <div class="project-number">03</div>
+          <div><div class="tag">WEB DEVELOPMENT</div><h3>Phone & Laptop Sale Website</h3><p>A website concept for browsing and selling phones and laptops.</p><div class="stack"><span>HTML</span><span>CSS</span></div></div>
+        </article>
+        <article class="project">
+          <div class="project-number">04</div>
+          <div><div class="tag">WEB DEVELOPMENT</div><h3>Restaurant Website</h3><p>A restaurant-focused website project with a clean customer-facing interface.</p><div class="stack"><span>HTML</span><span>CSS</span></div></div>
+        </article>
+      </div>
+    </section>
+      <!-- MSS Demo Container -->
+    <div class="mss-container">
+        <div class="mss-header">
+            <h3>Multi-Instrument & Vocal Separation System Demo</h3>
+            <p>Listen to pre-separated stems processed from a track.</p>
+        </div>
+
+        <!-- Track Selector (Optional if you have multiple samples) -->
+        <div class="mss-track-info">
+            <span class="track-title">Track: Bad Guy-Billie Eilish</span>
+        </div>
+
+        <!-- Global Controls -->
+        <div class="mss-global-controls">
+            <button id="playAllBtn" class="mss-btn primary-btn">▶ Play All Stems Together</button>
+            <button id="pauseAllBtn" class="mss-btn secondary-btn" style="display:none;">⏸ Pause All</button>
+        </div>
+
+        <!-- Stems Players Grid -->
+        <div class="stems-grid">
+            <!-- Original -->
+            <div class="stem-card">
+                <div class="stem-label">🎧 Original Mix</div>
+                <audio class="stem-audio" preload="metadata">
+                    <source src="assets/audio/original.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-controls">
+                    <button class="play-single-btn">▶ Play</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1">
+                </div>
+            </div>
+            
+            <!-- Vocals -->
+            <div class="stem-card">
+                <div class="stem-label">🎤 Vocals Stem</div>
+                <audio class="stem-audio" preload="metadata">
+                    <source src="assets/audio/vocals.mp3" type="audio/mp3">
+                </audio>
+                <div class="player-controls">
+                    <button class="play-single-btn">▶ Play</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1">
+                </div>
+            </div>
+
+            <!-- Drums -->
+            <div class="stem-card">
+                <div class="stem-label">🥁 Drums Stem</div>
+                <audio class="stem-audio" preload="metadata">
+                    <source src="assets/audio/drums.mp3" type="audio/mp3">
+                </audio>
+                <div class="player-controls">
+                    <button class="play-single-btn">▶ Play</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1">
+                </div>
+            </div>
+
+            <!-- Bass -->
+            <div class="stem-card">
+                <div class="stem-label">🎸 Bass Stem</div>
+                <audio class="stem-audio" preload="metadata">
+                    <source src="assets/audio/bass.mp3" type="audio/mp3">
+                </audio>
+                <div class="player-controls">
+                    <button class="play-single-btn">▶ Play</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1">
+                </div>
+            </div>
+
+            <div class="stem-card">
+                <div class="stem-label">🎧 Others</div>
+                <audio class="stem-audio" preload="metadata">
+                    <source src="assets/audio/other.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="player-controls">
+                    <button class="play-single-btn">▶ Play</button>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CSS Styles -->
+    <style>
+    .mss-container {
+        max-width: 850px;
+        margin: 40px auto;
+        padding: 25px;
+        background: #121214;
+        color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .mss-header h3 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        color: #b9f227;
+    }
+
+    .mss-header p {
+        color: #a0a0ab;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .mss-track-info {
+        background: #1e1e24;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        color: #d1d1db;
+    }
+
+    .mss-global-controls {
+        margin-bottom: 25px;
+    }
+
+    .mss-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .primary-btn {
+        background: #b9f227;
+        color: #121214;
+    }
+
+    .primary-btn:hover {
+        background: #b9f227;
+    }
+
+    .secondary-btn {
+        background: #ff4757;
+        color: #ffffff;
+    }
+
+    .stems-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 15px;
+    }
+
+    .stem-card {
+        background: #1a1a20;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #2a2a35;
+    }
+
+    .stem-label {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+
+    .stem-audio {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 35px;
+    }
+
+    .player-controls {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .play-single-btn {
+        background: #2f2f3d;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.85rem;
+    }
+
+    .play-single-btn:hover {
+        background: #3f3f52;
+    }
+
+    .volume-slider {
+        flex-grow: 1;
+        accent-color: #b9f227;
+        cursor: pointer;
+    }
+    </style>
+
+    <!-- JavaScript for Sync & Controls -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const audioElements = document.querySelectorAll(".stem-audio");
+        const playAllBtn = document.getElementById("playAllBtn");
+        const pauseAllBtn = document.getElementById("pauseAllBtn");
+        
+        // Play All functionality (Sync start)
+        playAllBtn.addEventListener("click", () => {
+            audioElements.forEach(audio => {
+                audio.currentTime = 0; // Reset to start
+                audio.play();
+            });
+            playAllBtn.style.display = "none";
+            pauseAllBtn.style.display = "inline-block";
+        });
+
+        // Pause All functionality
+        pauseAllBtn.addEventListener("click", () => {
+            audioElements.forEach(audio => {
+                audio.pause();
+            });
+            pauseAllBtn.style.display = "none";
+            playAllBtn.style.display = "inline-block";
+        });
+
+        // Individual card controls
+        document.querySelectorAll(".stem-card").forEach(card => {
+            const audio = card.querySelector(".stem-audio");
+            const playBtn = card.querySelector(".play-single-btn");
+            const volumeSlider = card.querySelector(".volume-slider");
+
+            playBtn.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                    playBtn.textContent = "⏸ Pause";
+                } else {
+                    audio.pause();
+                    playBtn.textContent = "▶ Play";
+                }
+            });
+
+            volumeSlider.addEventListener("input", (e) => {
+                audio.volume = e.target.value;
+            });
+
+            audio.addEventListener("ended", () => {
+                playBtn.textContent = "▶ Play";
+            });
+        });
+    });
+    </script>
+
+    <section id="education" class="section muted">
+      <div class="section-label">04 / EDUCATION & LANGUAGES</div>
+      <div class="two-col">
+        <div>
+          <h2>Information<br><span>Science.</span></h2>
+          <div class="edu-card"><p class="tag">UNIVERSITY</p><h3>University of Technology, Yatanarpon Cyber City</h3><p>Information Science Major</p></div>
+        </div>
+        <div>
+          <h2>Languages.</h2>
+          <div class="lang"><b>English</b><span>B2</span></div>
+          <div class="lang"><b>Japanese</b><span>N4</span></div>
+          <div class="lang"><b>Myanmar</b><span>Native</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="eyebrow">05 / CONTACT</p>
+      <h2>Let's build something<br><span>useful together.</span></h2>
+      <div class="contact-links">
+        <a href="mailto:khaungphone123@gmail.com">khaungphone123@gmail.com <span>↗</span></a>
+        <a href="tel:09799106696">09-799106696 <span>↗</span></a>
+      </div>
+      <p class="location">Yamethin, Mandalay Region</p>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Ye Khaung Phone</span><span>Junior Software Engineer</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
